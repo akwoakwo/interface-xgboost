@@ -1,0 +1,311 @@
+no,nama,gender,age,HbA1c_level,HCT,WBC,RBC,PLT,blood_glucose_level,diabetes
+1,Nina,P,29,9.7,31.9,9.63,4.5,471,135,Diabetes Melitus
+2,Febriyani,P,27,6.4,29.7,8.12,3.7,203,146,Diabetes Melitus
+3,Bilqis Husri,P,28,9.1,32.8,11.77,5.16,512,187,Diabetes Melitus
+4,Sahimah,P,80,8.5,37.0,12.05,4.40,213,151,Diabetes Melitus
+5,Wusuf,P,29,4.6,33.2,6.29,3.82,260,162,Diabetes Melitus
+6,Muh Fauzi,L,10,6.1,36.5,4.84,4.69,162,139,Diabetes Melitus
+7,Nasirah,P,60,9,35.9,8.57,4.39,457,185,Diabetes Melitus
+8,Hopsah,P,33,9.4,4.20,18.26,28.9,261,96,Non-Diabetes Melitus
+9,Andrea R,P,70,5.6,38.8,12.56,5.78,742,211,Diabetes Melitus
+10,Solid,L,67,6.2,3.92,8.70,3.40,306,167,Diabetes Melitus
+11,Aulia,P,40,6.7,34.3,6.21,4.75,173,112,Non-Diabetes Melitus
+12,Issatul,P,10,8,38.2,6.31,5.20,268,134,Diabetes Melitus
+13,Zaini,P,15,5.1,39.6,8.10,4.14,202,116,Non-Diabetes Melitus
+14,Nipah,P,77,4.5,36.2,6.23,4.46,285,180,Diabetes Melitus
+15,M Faiz M,L,21,5.4,24.6,8.87,4.66,540,213,Diabetes Melitus
+16,Rodiyah,P,71,8.3,34.8,7.71,4.25,221,256,Diabetes Melitus
+17,Hoiriyam,P,41,7.4,39.8,9.45,4.5,184,194,Diabetes Melitus
+18,Hasimah,P,60,7,29.9,10.71,3.91,218,198,Diabetes Melitus
+19,Sutiyah,P,47,5.6,38.3,10.67,4.70,232,201,Diabetes Melitus
+20,Aysilah,P,5,4.4,36.3,13.60,3.85,236,203,Diabetes Melitus
+21,Siti Sunah,P,34,5.8,37.9,9.74,4.25,115,97,Non-Diabetes Melitus
+22,Tellas,L,64,4.2,35.4,10.61,4.21,83,87,Non-Diabetes Melitus
+23,Kiptiyah,P,60,6.9,39.2,11.69,3.1,445,236,Diabetes Melitus
+24,Mutimmah,P,64,4.7,31.4,10.61,3.60,265,144,Diabetes Melitus
+25,Foyyiba,P,33,4.7,24.1,5.26,3.43,127,94,Non-Diabetes Melitus
+26,Mizah,P,45,5.3,39.4,9.71,4.54,265,95,Non-Diabetes Melitus
+27,Soleha,P,21,7.8,3.40,4.92,28.9,253,202,Diabetes Melitus
+28,Fauzah,P,61,7.6,4.57,8.81,36.3,422,336,Diabetes Melitus
+29,Erni Nur Yaiz,P,40,5.1,5.29,7.23,4.49,241,115,Non-Diabetes Melitus
+30,Saifullah,L,42,6.5,6.65,7.84,29.4,260,117,Non-Diabetes Melitus
+31,Anis Yuli,P,34,9.4,34.5,8.04,3.82,237,91,Non-Diabetes Melitus
+32,Abdi Rohman,L,38,5.8,39.4,10.10,4.85,490,119,Non-Diabetes Melitus
+33,Halimah,P,50,7.6,39.1,16.81,23.7,177,322,Diabetes Melitus
+34,Turah,P,57,9.6,16.1,7.45,1.81,260,227,Diabetes Melitus
+35,Kiptiyah,P,60,5.6,29.7,11.22,3.39,382,163,Diabetes Melitus
+36,Sumaiah,P,60,7.9,39.9,7.78,5.28,298,323,Diabetes Melitus
+37,Behri,L,59,8.6,48.7,7.02,5.01,334,72,Non-Diabetes Melitus
+38,Syafiih,L,48,7,42.0,7.78,4.76,243,126,Non-Diabetes Melitus
+39,Marpuah,P,60,7.5,40.0,7.24,4.90,192,190,Diabetes Melitus
+40,Zeiniyah,P,35,5.1,40.5,8.14,4.79,338,116,Non-Diabetes Melitus
+41,Jumah,P,67,7.9,48.0,8.39,5.20,194,279,Diabetes Melitus
+42,Nurhadi,L,59,6.7,42.0,13.47,6.16,245,112,Non-Diabetes Melitus
+43,Roqoyyah,P,67,4.9,44.5,7.56,5.58,276,114,Non-Diabetes Melitus
+44,Sujiraman,L,56,7.2,43.1,7.00,5.18,213,161,Diabetes Melitus
+45,Munir,L,57,8.4,43.5,9.85,5.09,241,128,Diabetes Melitus
+46,Jatim,L,67,8.6,43.5,9.25,5.09,284,284,Diabetes Melitus
+47,Suryati,P,56,5.4,42.1,5.82,4.43,255,107,Non-Diabetes Melitus
+48,Rokayah,P,57,5.1,34.2,19.65,4.43,349,123,Non-Diabetes Melitus
+49,Anas Badar,L,50,8.2,47.1,7.72,5.08,345,117,Non-Diabetes Melitus
+50,Mislum,P,36,5.3,35.7,6.66,4.52,238,125,Non-Diabetes Melitus
+51,Abid Kawi,L,60,9,36.5,10.42,4.57,311,298,Diabetes Melitus
+52,Sarukah,L,63,8.3,40.4,13.43,4.31,268,232,Diabetes Melitus
+53,Mainah,P,66,9.7,29.1,20.12,3.23,266,396,Diabetes Melitus
+54,Samsiyah,P,54,6.5,32.3,13.91,3.46,182,255,Diabetes Melitus
+55,Inarah Putri,P,17,9.8,32.9,11.59,4.79,321,114,Non-Diabetes Melitus
+56,Misnati,P,44,6.9,20.9,9.60,2.79,788,91,Non-Diabetes Melitus
+57,Moh Ali Supri,L,30,7.9,41.0,20.45,5.76,304,304,Diabetes Melitus
+58,Murilsah,P,52,5.4,36.7,10.75,4.15,440,105,Non-Diabetes Melitus
+59,Maryum,P,52,9.8,33.1,18.94,4.13,158,380,Diabetes Melitus
+60,Seniman,L,49,9.8,45.1,9.70,4.88,269,413,Diabetes Melitus
+61,Modah,P,48,9,34.3,7.87,3.94,230,206,Diabetes Melitus
+62,Indah Destiyaninah,P,3,5.1,27.0,7.74,4.87,380,116,Non-Diabetes Melitus
+63,Misranom,L,54,8.7,40.4,6.42,4.24,193,138,Diabetes Melitus
+64,Hanafi,L,38,5,34.3,6.89,4.02,330,150,Diabetes Melitus
+65,Adi Ugd,L,35,4.3,47.0,9.32,5.89,331,84,Non-Diabetes Melitus
+66,Suda'e,L,66,7.9,39.8,7.72,4.06,360,188,Diabetes Melitus
+67,Mila Munawa,P,19,7.7,29.5,8.47,3.02,255,102,Non-Diabetes Melitus
+68,Purnawanto,L,33,9.4,39.2,12.69,5.09,326,127,Diabetes Melitus
+69,Maulia Tinta,P,19,6.1,34.6,8.85,3.48,322,93,Non-Diabetes Melitus
+70,Mustofa,L,54,6.9,40.1,9.4,4.46,222,130,Diabetes Melitus
+71,Ananda Rama,L,3,8.1,35.3,12.79,5.04,290,86,Non-Diabetes Melitus
+72,Mositihaji,L,5,4.6,42.7,5.09,4.72,239,73,Non-Diabetes Melitus
+73,Moh Fadoni,L,45,4.6,42.5,5.47,5.67,168,90,Non-Diabetes Melitus
+74,Suradi,L,53,8.6,40.7,5.59,6.01,198,72,Non-Diabetes Melitus
+75,Hamimah,P,35,9.2,35.2,10.85,3.86,271,147,Diabetes Melitus
+76,Sunimah,P,66,6.5,43.0,4.83,5.20,157,83,Non-Diabetes Melitus
+77,Jumariyah,P,43,9.3,29.1,10.34,4.13,350,185,Diabetes Melitus
+78,Nurhani,P,52,4.5,41.8,7.80,4.73,306,63,Non-Diabetes Melitus
+79,Siti Aisyah,P,47,7.2,37.2,7.19,4.42,261,191,Diabetes Melitus
+80,Rohanah,P,47,8.2,39.9,11.14,5.06,238,198,Diabetes Melitus
+81,A. Raihan,L,12,9.4,38.7,0.37,4.91,148,75,Non-Diabetes Melitus
+82,Dalimah,P,23,9,41.6,16.82,4.77,445,103,Non-Diabetes Melitus
+83,Ririn ,P,36,9.2,38.4,5.63,4.6,227,254,Diabetes Melitus
+84,Marijah,L,74,5.3,35.4,7.78,4.23,146,153,Diabetes Melitus
+85,Abd Rachma,L,40,9.5,36.4,11.59,4.62,173,484,Diabetes Melitus
+86,Zakiyah,P,45,5.7,36.5,6.90,4.08,331,124,Non-Diabetes Melitus
+87,Amriyah,P,39,7.2,38.3,9.97,4.28,343,161,Diabetes Melitus
+88,Moh. Dinom,L,47,8.5,32.7,10.24,4.71,355,274,Diabetes Melitus
+89,Halriyeh,P,56,5.9,39.1,8.75,4.39,344,116,Non-Diabetes Melitus
+90,Bunaden,L,58,5.9,55.6,5.73,6.14,196,114,Non-Diabetes Melitus
+91,Sukarna,P,47,6.5,40.7,11.70,5.33,304,255,Diabetes Melitus
+92,Jumi'ah,P,74,7.6,36.0,11.13,4.12,191,310,Diabetes Melitus
+93,Sunawati,P,44,4.9,29.5,5.55,3.72,225,88,Non-Diabetes Melitus
+94,Mikhhaiah,P,5,7,35.7,14.68,4.81,334,198,Diabetes Melitus
+95,Aminah,P,35,5.3,26.6,24.21,3.64,315,95,Non-Diabetes Melitus
+96,H. Naida,P,62,5.1,31.3,4.85,3.39,216,125,Non-Diabetes Melitus
+97,Rodiyah,P,51,9.8,51.3,16.2,6.53,245,470,Diabetes Melitus
+98,Marisa,P,29,6.8,33.1,7.82,3.97,235,157,Diabetes Melitus
+99,Mistutik,L,60,8.4,28.7,23.48,4.06,253,128,Diabetes Melitus
+100,Rahmawati,P,20,4.7,32.8,12.41,4.00,271,113,Non-Diabetes Melitus
+101,Munirah,P,29,5.3,32.8,10.32,3.48,199,95,Non-Diabetes Melitus
+102,Mounah,P,28,4.0,35.4,10.64,3.96,280,108,Non-Diabetes Melitus
+103,Harnanik,P,30,5.3,32.2,12.84,3.23,291,119,Non-Diabetes Melitus
+104,Maimuna,P,23,6.7,31.7,8.77,4.53,514,112,Non-Diabetes Melitus
+105,Isni Sholeha,P,26,5.1,32.4,12.42,4.42,291,116,Non-Diabetes Melitus
+106,Nurhasanah,P,19,4.7,31.8,2.63,4.03,191,99,Non-Diabetes Melitus
+107,Suhartatik,P,28,6.5,31.6,8.64,37.3,253,117,Non-Diabetes Melitus
+108,Amina,P,34,5.8,35.3,10.60,4.34,391,110,Non-Diabetes Melitus
+109,Ilsun,P,21,5.9,34.7,6.27,4.17,230,116,Non-Diabetes Melitus
+110,Qulso Khotimah,P,23,5.4,36.8,5.26,4.66,244,98,Non-Diabetes Melitus
+111,Yanti,P,29,8.1,38.1,6.39,4.43,285,122,Non-Diabetes Melitus
+112,Juana,P,28,9.1,34.6,8.46,3.99,216,106,Non-Diabetes Melitus
+113,Fadilah,P,31,5.0,35.0,11.88,3.89,400,118,Non-Diabetes Melitus
+114,Nuraini,P,20,9.4,28.8,14.09,3.35,279,96,Non-Diabetes Melitus
+115,Tutik Purnamasari,P,26,8.1,25.1,13.96,3.49,250,86,Non-Diabetes Melitus
+116,Santiyani,P,27,9.3,37.8,8.19,4.32,249,160,Diabetes Melitus
+117,Aisyah Suci R,P,25,8.2,34.9,8.31,3.96,294,104,Non-Diabetes Melitus
+118,Tiah,P,62,9.8,31.2,6.62,30.26,178,376,Diabetes Melitus
+119,Ilyasa,L,15,7.4,43.7,11.51,5.26,296,128,Diabetes Melitus
+120,Horiyah,P,40,6.8,34.2,8.54,4.09,216,112,Non-Diabetes Melitus
+121,Sapunah,P,31,5.9,31.3,11.98,4.06,195,121,Non-Diabetes Melitus
+122,B'Desi,P,30,6.1,35.5,9.52,5.05,337,118,Non-Diabetes Melitus
+123,Faridah,P,27,7.7,32.9,8.64,3.70,245,102,Non-Diabetes Melitus
+124,Subaidah,P,28,5.4,30.3,11.07,3.77,447,105,Non-Diabetes Melitus
+125,Indah  ,P,14,8.2,34.8,6.97,5.17,407,104,Non-Diabetes Melitus
+126,Ismiyati,P,36,4.6,32.4,7.20,3.19,233,101,Non-Diabetes Melitus
+127,Ila,P,22,8.5,35.4,9.88,4.24,282,106,Non-Diabetes Melitus
+128,Desi Novitasari,P,20,4.3,35.8,12.71,39.8,289,84,Non-Diabetes Melitus
+129,Maisaroh,P,31,5.1,38.1,11.34,4.25,195,125,Non-Diabetes Melitus
+130,Moh. Arsaka,L,76,8.2,33.3,13.53,4.69,460,117,Non-Diabetes Melitus
+131,Moh. Putra D,L,25,5.8,33.3,9.96,4.37,220,110,Non-Diabetes Melitus
+132,Halilah,P,24,4.7,30.7,10.56,3.54,306,111,Non-Diabetes Melitus
+133,Qomariyah,P,26,7.9,35.0,10.75,4.20,215,106,Non-Diabetes Melitus
+134,Siti Laela,P,20,5.3,33.3,5.45,4.28,246,95,Non-Diabetes Melitus
+135,Amina,P,36,5.9,32.2,9.72,35.4,323,110,Non-Diabetes Melitus
+136,Nawiyah,P,31,5.9,33.8,10.26,3.53,200,126,Non-Diabetes Melitus
+137,Siti Rohmah,P,22,8.1,34.1,12.74,3.84,382,86,Non-Diabetes Melitus
+138,Alya Rohana,P,27,7.7,34.1,10.25,3.74,239,102,Non-Diabetes Melitus
+139,Turiyah,P,28,5.9,31.4,6.64,4.57,388,106,Non-Diabetes Melitus
+140,Holipah,P,36,8.2,34.3,17.20,37.2,297,104,Non-Diabetes Melitus
+141,Azizah,P,33,5.9,36.7,12.26,4.76,422,160,Diabetes Melitus
+142,Zaitun,P,24,8.5,34.9,20.0,4.04,388,106,Non-Diabetes Melitus
+143,Ronihana,P,33,8.2,33.9,7.63,4.15,287,104,Non-Diabetes Melitus
+144,Moni'ah,P,30,5.5,33.2,8.97,3.86,283,125,Non-Diabetes Melitus
+145,Tunaimi,P,28,4.1,34.1,9.95,3.96,232,89,Non-Diabetes Melitus
+146,Fia Wulandari,P,20,4.7,30.5,9.75,4.15,239,111,Non-Diabetes Melitus
+147,Mistiya,P,35,7.7,34.0,8.75,3.78,180,102,Non-Diabetes Melitus
+148,Juhina,P,37,5.8,21.2,6.34,3.79,245,110,Non-Diabetes Melitus
+149,Khotimah,P,23,8.0,34.3,9.24,4.50,287,96,Non-Diabetes Melitus
+150,Asmaningsih,P,32,5.6,39.9,8.28,39.3,315,126,Non-Diabetes Melitus
+151,Fitriyaningsih,P,23,4.7,35.9,12.55,4.23,195,94,Non-Diabetes Melitus
+152,Atikatur S,P,18,5.3,38.1,4.64,4.39,213,113,Non-Diabetes Melitus
+153,Maimunah,P,27,5.3,37.3,12.41,4.43,345,95,Non-Diabetes Melitus
+154,Hotimah,P,20,4.2,38.0,8.61,4.36,237,87,Non-Diabetes Melitus
+155,Hotimah,P,20,5.7,28.0,8.61,4.36,237,89,Non-Diabetes Melitus
+156,Suhcuinah,P,21,4.6,36.0,6.43,4.15,262,101,Non-Diabetes Melitus
+157,Yuliyatin,P,24,6.9,20.4,7.65,3.48,172,108,Non-Diabetes Melitus
+158,Erina Ririn,P,21,9.7,34.1,11.85,3.84,437,387,Diabetes Melitus
+159,Dewi Indriyani,P,38,6.4,34.6,11.14,3.86,423,142,Diabetes Melitus
+160,Sayuna,P,39,8.5,27.2,7.46,3.48,342,106,Non-Diabetes Melitus
+161,Hellyana,P,19,5.1,38.1,6.87,4.28,290,115,Non-Diabetes Melitus
+162,B'Diah,P,25,4.7,34.3,5.63,4.29,192,111,Non-Diabetes Melitus
+163,Fitriya,P,22,4.4,29.5,12.42,5.2,350,88,Non-Diabetes Melitus
+164,Uswatun H,P,24,8.6,27.7,12.14,3.75,410,90,Non-Diabetes Melitus
+165,Tis'atun Tammoh,P,35,9.4,34.2,7.24,4.15,262,196,Diabetes Melitus
+166,Sumariyah,P,28,6.7,11.9,9.11,3.65,243,112,Non-Diabetes Melitus
+167,Hamimah,P,23,5.4,37.2,8.51,4.26,291,98,Non-Diabetes Melitus
+168,Miswati,P,31,7.7,33.0,13.10,3.72,250,102,Non-Diabetes Melitus
+169,Uswatun H,P,23,7.7,35.8,13.06,3.97,286,102,Non-Diabetes Melitus
+170,Hamsatun,P,31,5.7,36.1,9.15,4.14,278,89,Non-Diabetes Melitus
+171,Sumridah,P,30,5.9,44.1,9.86,5.3,277,106,Non-Diabetes Melitus
+172,Yuliana,P,21,9.1,28.7,10.06,4.15,365,106,Non-Diabetes Melitus
+173,Yuri Elisa,P,27,5.9,40.5,10.80,4.84,492,110,Non-Diabetes Melitus
+174,Imamatul Aini,P,20,4.7,33.6,10.43,4.80,345,111,Non-Diabetes Melitus
+175,Sumiati,P,30,7.9,33.4,8.68,4.39,177,160,Diabetes Melitus
+176,Rokayyah,P,32,5.6,35.5,10.47,4.02,277,98,Non-Diabetes Melitus
+177,Anggi M,P,20,9.4,35.2,7.06,4.21,307,91,Non-Diabetes Melitus
+178,Maria Ulfa,P,21,5.4,33.7,8.42,3.79,256,105,Non-Diabetes Melitus
+179,Lailatul Qom,P,20,8.2,33.9,9.60,4.18,176,91,Non-Diabetes Melitus
+180,Nur Faizah,P,27,4.7,33.2,8.41,3.63,246,111,Non-Diabetes Melitus
+181,Sittiyah,P,30,5.9,31.2,9.78,3.89,204,110,Non-Diabetes Melitus
+182,Rina R,P,31,5.7,38.7,8.83,4.32,341,94,Non-Diabetes Melitus
+183,Supami,P,34,8.1,25.6,7.68,3.08,288,330,Diabetes Melitus
+184,Tolak,L,37,4.6,33.3,10.99,3.84,311,101,Non-Diabetes Melitus
+185,Sufrotun M,P,25,6.1,32.8,10.84,3.75,255,86,Non-Diabetes Melitus
+186,Rukmiati,P,42,5.4,33.7,8.24,4.41,270,123,Non-Diabetes Melitus
+187,Nasifan,P,36,5.9,35.3,12.31,3.82,348,110,Non-Diabetes Melitus
+188,Wardatun H,P,21,4.2,39.3,7.54,3.88,287,87,Non-Diabetes Melitus
+189,Misriha,P,40,7.7,34.7,11.81,4.05,265,102,Non-Diabetes Melitus
+190,Susiana,P,36,6.0,36.6,9.15,4.51,241,124,Non-Diabetes Melitus
+191,Nanda A,P,17,7.7,29.2,5.97,3.55,226,102,Non-Diabetes Melitus
+192,Selvi Sabrina,P,20,4.7,31.7,8.90,3.62,294,111,Non-Diabetes Melitus
+193,Eka R,P,20,8.2,30.8,9.80,3.40,210,104,Non-Diabetes Melitus
+194,Hasiyah,P,34,5.9,32.9,6.33,4.37,282,110,Non-Diabetes Melitus
+195,Fatimah,P,43,5.9,34.8,11.95,4.19,262,121,Non-Diabetes Melitus
+196,Mile,P,34,5.8,32.6,10.83,3.82,226,110,Non-Diabetes Melitus
+197,Sunai,P,33,4.9,38.2,7.71,4.31,248,123,Non-Diabetes Melitus
+198,Suhailaw,P,25,5.1,32.4,8.65,4.20,314,116,Non-Diabetes Melitus
+199,Lalifah,P,32,5.5,37.0,11.99,4.23,246,98,Non-Diabetes Melitus
+200,Jumiyah,P,25,7.7,36.0,8.14,3.91,192,102,Non-Diabetes Melitus
+201,Nor Sholeha,P,20,5.7,25.5,7.20,3.48,251,89,Non-Diabetes Melitus
+202,Qomarun F,P,23,8.6,30.2,9.93,3.28,235,131,Diabetes Melitus
+203,Soleha,P,47,4.6,30.0,8.68,3.77,310,101,Non-Diabetes Melitus
+204,Herlina,P,38,7.9,35.0,7.39,3.20,250,96,Non-Diabetes Melitus
+205,Nur S,P,28,9.0,32.7,9.01,4.02,125,103,Non-Diabetes Melitus
+206,Elysa,P,27,8,32.3,6.58,4.11,302,96,Non-Diabetes Melitus
+207,Fadilah,P,15,5.6,35.0,7.36,3.98,188,81,Non-Diabetes Melitus
+208,Kailah,P,3,5.1,31.3,6.71,5.36,170,115,Non-Diabetes Melitus
+209,Kiptiyah,P,65,8,40.2,6.39,43.4,223,96,Non-Diabetes Melitus
+210,Harifah,P,48,4.4,39.1,54.80,45.1,229,92,Non-Diabetes Melitus
+211,Sulaiha,P,30,4.2,36.5,10.47,4.41,272,98,Non-Diabetes Melitus
+212,Mifkarromah,P,22,6.5,41.9,7.18,5.15,231,117,Non-Diabetes Melitus
+213,Sami'ah,P,29,5.8,37.9,5.73,4.57,252,110,Non-Diabetes Melitus
+214,Areta,L,13,4.3,44.0,9.23,4.12,269,146,Diabetes Melitus
+215,Sulastri,P,40,5.9,36.6,6.64,4.23,285,110,Non-Diabetes Melitus
+216,Rumhana,P,55,5.7,38.6,5.02,4.35,194,94,Non-Diabetes Melitus
+217,Maruto,L,53,9.0,42.5,16.06,5.22,392,103,Non-Diabetes Melitus
+218,Niani,P,28,8.2,45.0,10.12,4.35,313,104,Non-Diabetes Melitus
+219,Sabekif,P,19,5.4,35.4,9.93,4.36,274,107,Non-Diabetes Melitus
+220,Rabais S,P,26,7.7,36.0,9.23,3.17,371,324,Diabetes Melitus
+221,Ahmad Faikul,L,54,5.8,34.4,4.19,4.24,309,110,Non-Diabetes Melitus
+222,Muktiyah,P,36,7.7,40.7,10.32,5.05,302,102,Non-Diabetes Melitus
+223,Laili R,P,21,8,31.0,5.94,3.89,354,96,Non-Diabetes Melitus
+224,Runusiyeh,P,70,5.0,37.0,9.70,5.61,908,150,Diabetes Melitus
+225,Nawiyah,P,31,7.8,28.4,7.19,4.66,414,127,Diabetes Melitus
+226,Hotirah,P,15,5.8,25.2,7.15,3.80,460,110,Non-Diabetes Melitus
+227,Saeha,P,41,9.5,29.6,17.49,3.87,340,123,Non-Diabetes Melitus
+228,Rumsiyah,P,33,7.7,38.8,11.90,5.01,342,102,Non-Diabetes Melitus
+229,Hairunnisaf,P,32,4.7,34.2,10.58,39.4,206,111,Non-Diabetes Melitus
+230,Ulfatun H,P,22,8.8,3.90,10.25,33.8,331,118,Non-Diabetes Melitus
+231,Maryam,P,33,5.9,25.7,9.04,4.24,249,110,Non-Diabetes Melitus
+232,Nur Hasanah,P,16,7.7,37.9,14.65,4.75,360,102,Non-Diabetes Melitus
+233,Sarani,P,30,5.4,35.6,8.21,4.01,261,91,Non-Diabetes Melitus
+234,Indah Sari,P,26,4.6,34.8,10.29,4.19,319,101,Non-Diabetes Melitus
+235,Hosmin,P,27,5.8,32.2,7.17,3.92,357,97,Non-Diabetes Melitus
+236,Farihatul A,P,24,5.3,41.3,7.03,5.25,263,91,Non-Diabetes Melitus
+237,Laelir,P,19,8.2,33.6,12.76,3.81,355,91,Non-Diabetes Melitus
+238,Fika,P,5,5.6,31.7,5.09,4.11,200,122,Non-Diabetes Melitus
+239,Muti ,P,18,5.5,36.8,6.65,4.20,301,140,Diabetes Melitus
+240,Romlah,P,29,8,34.0,9.63,3.77,295,96,Non-Diabetes Melitus
+241,Inayatul ,P,5,6.7,30.4,8.78,3.59,296,112,Non-Diabetes Melitus
+242,Arsilah M,P,5,4.2,36.5,6.25,4.83,160,97,Non-Diabetes Melitus
+243,AL Gazali,L,5,5.9,31.5,5.40,4.21,288,107,Non-Diabetes Melitus
+244,Uswatul H,P,20,5.3,34.3,10.02,4.51,284,91,Non-Diabetes Melitus
+245,Intan Ali,P,21,5.9,33.3,6.80,4.45,368,90,Non-Diabetes Melitus
+246,Suparman,L,62,9.2,34.2,7.06,4.23,354,152,Diabetes Melitus
+247,Ari Afikah,P,7,6.7,34.1,3.50,4.45,158,112,Non-Diabetes Melitus
+248,Arwah',P,22,4.5,27.9,8.14,2.40,152,92,Non-Diabetes Melitus
+249,Dinda Nidayas,P,25,5.9,29.6,11.61,3.53,283,121,Non-Diabetes Melitus
+250,Sa'adah,P,37,6.1,34.5,8.22,4.12,226,86,Non-Diabetes Melitus
+251,Aqila Tabita A,P,5,8.2,31.6,4.40,4.05,226,104,Non-Diabetes Melitus
+252,Maulidatus Sho,P,11,4.2,28.3,10.97,4.70,295,97,Non-Diabetes Melitus
+253,Aisyatul ,P,3,8.1,36.3,15.35,4.84,209,86,Non-Diabetes Melitus
+254,Muh. Hawah,L,14,4.6,40.4,5.25,5.59,332,163,Diabetes Melitus
+255,Nur Faizah,P,24,4.4,25.1,19.40,3.66,215,59,Non-Diabetes Melitus
+256,Nur Halimah,P,46,10.0,33.0,6.45,5.33,528,472,Diabetes Melitus
+257,Habibi,L,45,4.3,31.3,4.65,3.49,204,84,Non-Diabetes Melitus
+258,Rohayyah,P,39,7.4,36.6,12.02,4.08,282,285,Diabetes Melitus
+259,Sultan,L,40,4.7,44.2,65.0,5.28,226,94,Non-Diabetes Melitus
+260,Eka Usuotul,P,38,5.9,30.6,8.43,3.37,278,106,Non-Diabetes Melitus
+261,Nurul ,P,33,8,32.6,12.30,4.7,285,96,Non-Diabetes Melitus
+262,Saifudin Zuhi,L,76,8.2,40.8,3.33,4.21,108,149,Diabetes Melitus
+263,Salma,P,50,5.9,33.6,7.23,3.81,265,121,Non-Diabetes Melitus
+264,Bu'a,P,67,7.2,23.2,5.36,3.06,224,101,Non-Diabetes Melitus
+265,Novita,P,28,8,31.7,7.82,3.50,256,96,Non-Diabetes Melitus
+266,Muh. Ham,L,32,5.3,38.6,7.14,4.68,250,95,Non-Diabetes Melitus
+267,Fitriyah,P,12,5.6,6.44,6.64,51.7,139,122,Non-Diabetes Melitus
+268,Fahrur,L,34,5.7,44.6,6.77,5.01,322,143,Diabetes Melitus
+269,Rifa'i,L,25,4.7,37.6,7.39,4.83,293,143,Diabetes Melitus
+270,Zainuddin,L,30,6.1,51.6,6.84,5.84,196,117,Non-Diabetes Melitus
+271,Rasma,P,22,8,45.7,9.93,4.93,364,78,Non-Diabetes Melitus
+272,Kutsiyah,P,55,7.3,39.2,9.76,4.78,470,325,Diabetes Melitus
+273,Fandul,L,34,9,44.8,7.40,5.25,294,103,Non-Diabetes Melitus
+274,Rokeya,P,45,4.2,45.1,7.28,5.31,300,97,Non-Diabetes Melitus
+275,Marsidan,L,90,5.1,20.6,3.24,3.04,292,118,Non-Diabetes Melitus
+276,Sariti,P,86,5.4,20.5,4.89,2.87,138,145,Diabetes Melitus
+277,Asmir,L,91,7.5,38.5,4.54,4.78,415,142,Diabetes Melitus
+278,Hasimah,L,91,8.4,27.8,4.70,3.60,142,205,Diabetes Melitus
+279,Sumo,L,91,9.4,31.8,5.91,4.54,82,136,Diabetes Melitus
+280,Siti Farhan,P,35,6.8,38.1,7.96,4.34,357,82,Non-Diabetes Melitus
+281,Muzaki,L,40,8.6,44.2,7.17,5.17,292,173,Diabetes Melitus
+282,Taho,L,58,5.1,40.9,11.89,4.34,234,115,Non-Diabetes Melitus
+283,Abd. Safii,L,87,8.7,40.4,6.82,4.63,301,129,Diabetes Melitus
+284,Sanur,L,45,4.4,35.7,5.59,3.77,295,92,Non-Diabetes Melitus
+285,Nasuha,L,37,5.9,36.6,5.50,4.12,179,106,Non-Diabetes Melitus
+286,Toriman,L,40,4,44.2,75.3,4.94,271,120,Non-Diabetes Melitus
+287,Samsiri,L,34,6.9,38.4,4.48,4.63,180,108,Non-Diabetes Melitus
+288,Arip,L,45,4.4,43.2,6.17,4.72,255,88,Non-Diabetes Melitus
+289,Amina,P,43,8.1,39.5,11.63,4.64,285,86,Non-Diabetes Melitus
+290,Rohmah,P,35,9,34.0,6.38,4.21,293,103,Non-Diabetes Melitus
+291,Suadah,L,39,4.1,24.0,7.42,3.58,295,120,Non-Diabetes Melitus
+292,Salimah,P,55,7.3,40.9,7.16,4.89,255,145,Diabetes Melitus
+293,Misnati,P,35,5.4,37.3,6.18,4.44,236,117,Non-Diabetes Melitus
+294,Muksin,L,35,6.1,37.9,6.26,4.42,142,93,Non-Diabetes Melitus
+295,Toniyah,L,30,4.7,38.7,8.11,4.75,275,111,Non-Diabetes Melitus
+296,Niti,P,34,5.9,32.8,6.59,4.14,185,110,Non-Diabetes Melitus
+297,Dulmuni,L,44,8.9,48.2,6.62,5.23,240,103,Non-Diabetes Melitus
+298,Mat Halil,L,42,5.1,35.9,6.34,4.19,248,125,Non-Diabetes Melitus
+299,Sumi,P,36,8.8,35.1,5.26,4.36,240,132,Diabetes Melitus
+300,Mufitah,P,30,5.7,5.61,8.07,46.1,233,89,Non-Diabetes Melitus
+301,Siti Rusma,P,38,4.2,37.4,10.30,5.14,323,87,Non-Diabetes Melitus
+302,Mustian,L,29,8.9,37.1,8.75,4.05,262,154,Diabetes Melitus
+303,Misnan,L,33,4.6,37.6,6.95,4.4,286,163,Diabetes Melitus
+304,Zahratu,P,4,4.3,32.8,8.52,5.48,449,87,Non-Diabetes Melitus
+305,Husri,L,25,6.8,4.92,2.90,33.4,229,82,Non-Diabetes Melitus
+306,Umilu,P,45,9.8,36.6,8.36,4.13,228,429,Diabetes Melitus
+307,Pusiyah,P,89,8.4,43.0,7.80,5.10,187,128,Diabetes Melitus
+308,Citra,P,65,5.9,32.9,6.51,4.29,254,116,Non-Diabetes Melitus
+309,Dewi  ,P,45,4.2,40.1,8.85,4.52,375,97,Non-Diabetes Melitus
+310,Muh Zaini,L,31,6.8,39.0,7.86,4.17,186,80,Non-Diabetes Melitus
