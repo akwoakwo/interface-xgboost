@@ -61,70 +61,101 @@ if page == "Ringkasan Penelitian":
     
     st.subheader("1.4.3 Transformasi Data")
     st.write("Atribut dengan kondisi tipe data numerik akan mempermudah model untuk melakukan perhitungan klasifikasi.")
-    transformation_data = pd.DataFrame(
+    gender_transfor = pd.DataFrame(
         [
-            {"Data": "Female", "Transformasi": "0"},
-            {"Data": "Male", "Transformasi": "1"}
+            {"Gender": "Female", "Transformasi": "0"},
+            {"Gender": "Male", "Transformasi": "1"}
         ]
     )
-    st.dataframe(transformation_data)
+    st.dataframe(gender_transfor)
     
-    st.subheader("1.4.4 Balancing Data")
+    smoking_transfor = pd.DataFrame(
+        [
+            {"Smoking_history": "No Info", "Transformasi": "0"},
+            {"Smoking_history": "current", "Transformasi": "1"},
+            {"Smoking_history": "ever", "Transformasi": "2"},
+            {"Smoking_history": "former", "Transformasi": "3"},
+            {"Smoking_history": "never", "Transformasi": "4"},
+            {"Smoking_history": "not current", "Transformasi": "5"},
+        ]
+    )
+    st.dataframe(smoking_transfor)
+    
+    st.subheader("1.4.4 Rekayasa Atribut")
+    st.write("Dalam upaya meningkatkan performa model klasifikasi, penelitian ini menerapkan teknik rekayasa fitur menggunakan metode polynomial features. Rekayasa fitur bertujuan menciptakan atribut baru yang bersifat turunan atau interaksi dari fitur-fitur numerik awal, sehingga mampu mengungkapkan pola non-linear yang mungkin tidak tertangkap oleh fitur asli.")    
+    st.write("Berikut merupakan contoh hasil penambahan rekayasa fitur pada Data Puskesmas")
+    fitur_polynomial = pd.DataFrame(
+        [
+            {"gender": 0, "age": 29, "hypertension": 0, "heart_disease": 0, "smoking_history": 4, "bmi": 3915.0, "HbA1c_level": 9.7, "blood_glucose_level": 135},
+            {"gender": 0, "age": 27, "hypertension": 1, "heart_disease": 0, "smoking_history": 0, "bmi": 3942.0, "HbA1c_level": 6.4, "blood_glucose_level": 146},
+            {"gender": 0, "age": 28, "hypertension": 0, "heart_disease": 0, "smoking_history": 4, "bmi": 5236.0, "HbA1c_level": 9.1, "blood_glucose_level": 187}
+        ]
+    )
+    st.dataframe(fitur_polynomial)
+    
+    st.subheader("1.4.5 Balancing Data")
     st.write("Kendala yang ditemukan pada data Kaggle sebagai data yang akan membangun model klasifikasi terlatih adalah adanya ketidakseimbangan target atau kelas antara kelas mayoritas dan minoritas sehingga diterapkan teknik oversampling dengan metode Adaptive Synthetic Sampling (ADASYN) untuk mengatasi ketidakseimbangan kelas pada data.")
+    st.write("Berikut merupakan grafik yang menampilkan perbandingan jumlah kelas sebelum dan setelah penerapan ADASYN")
     st.image("asset/balancing_diagram.png", caption="Gambar 2. Diagram Perbandingan Kelas Pada Data Sebelum & Setelah ADASYN")
     
-    st.subheader("1.4.5 Normalisasi Data")
+    st.subheader("1.4.6 Normalisasi Data")
     st.write("Penerapan normalisasi untuk meningkatkan kontribusi dari skala fitur dengan tipe data numerik yang distandarisasi dalam proses kinerja model. Hal ini menghindari adanya skala fitur yang berbanding jauh karena dapat menyebabkan bias terhadap fitur dengan nilai yang cukup tinggi.")
     before_normalize = pd.DataFrame(
         [
-            {"gender": 0, "age": 80, "HbA1c_level": 6.6, "blood_glucose_level": 140},
-            {"gender": 0, "age": 54, "HbA1c_level": 6.6, "blood_glucose_level": 80},
-            {"gender": 1, "age": 28, "HbA1c_level": 5.7, "blood_glucose_level": 158}
+            {"gender": 0, "age": 29, "hypertension": 0, "heart_disease": 0, "smoking_history": 4, "bmi": 3915.0, "HbA1c_level": 9.7, "blood_glucose_level": 135},
+            {"gender": 0, "age": 27, "hypertension": 1, "heart_disease": 0, "smoking_history": 0, "bmi": 3942.0, "HbA1c_level": 6.4, "blood_glucose_level": 146},
+            {"gender": 0, "age": 28, "hypertension": 0, "heart_disease": 0, "smoking_history": 4, "bmi": 5236.0, "HbA1c_level": 9.1, "blood_glucose_level": 187}
         ]
     )
     st.dataframe(before_normalize)
     st.write("Berikut merupakan contoh data setelah dilakukan normalisasi")
     after_normalize = pd.DataFrame(
         [
-            {"gender": -0.83, "age": 1.42, "HbA1c_level": 0.704, "blood_glucose_level": -0.123},
-            {"gender": -0.83, "age": 0.21, "HbA1c_level": 0.704, "blood_glucose_level": -1.877},
-            {"gender": 1.20, "age": -1.00, "HbA1c_level": -0.224, "blood_glucose_level": 0.402}
+            {"gender": -0.72, "age": 1.43, "hypertension": -0.28, "heart_disease": 5.16, "smoking_history": 0.94, "bmi": -0.543667, "HbA1c_level": 0.496, "blood_glucose_level": -0.123},
+            {"gender": -0.72, "age": 0.21, "hypertension": -0.28, "heart_disease": -0.19, "smoking_history": -1.33, "bmi": -0.250808, "HbA1c_level": 0.496, "blood_glucose_level": -1.873},
+            {"gender": 1.3, "age": -1.00, "hypertension": -0.28, "heart_disease": -0.19, "smoking_history": 0.94, "bmi": -0.250808, "HbA1c_level": -3.110, "blood_glucose_level": 0.401}
         ]
     )
     st.dataframe(after_normalize)
     
-    st.subheader("1.4.6 Pembagian Data")
+    st.subheader("1.4.7 Pembagian Data")
     st.write("Data penelitian akan dipisah ke dalam dua bagian, yaitu data training dan data testing. Presentase pembagian dari data training dan data testing akan menerapkan 3 jenis rasio pembagian yang berbeda mulai dari 90:10, 80:20, dan 70:30 dengan membagi jumlah kelas yang telah seimbang.")
     st.image("asset/split_90%.png", caption="Gambar 3. Pembagian Data Dengan Rasio 90:10")
     st.image("asset/split_80%.png", caption="Gambar 4. Pembagian Data Dengan Rasio 80:20")
     st.image("asset/split_70%.png", caption="Gambar 5. Pembagian Data Dengan Rasio 70:30")
     
-    st.subheader("1.4.7 Hasil Akhir Skenario Pengujian")
+    st.subheader("1.4.8 Hasil Akhir Skenario Pengujian")
     st.write("Pada proses klasifikasi menggunakan Extreme Gradient Boosting (XGBOOST) terdapat 2 skenario yang dilakukan uji coba lalu dibandingkan satu sama lain. Skenario pertama dengan menerapkan metode XGBOOST untuk klasifikasi diabetes tanpa disertai teknik oversampling menggunakan Adaptive Synthetic Sampling (ADASYN) sebagai penyeimbang data. Sementara skenario kedua akan menerapkan ADASYN pada klasifikasi diabetes menggunakan model XGBOOST. Selain itu, di setiap skenario terdapat 3 jenis pembagian data training dan data testing yang digunakan yaitu 90%, 80%, dan 70%. Pembagian rasio ini bertujuan untuk melihat kinerja model pada rasio pembagian data yang berbeda.")
     classification_table = pd.DataFrame(
         [
-            {"Skenario": "XGBOOST", "Data": "Data Kaggle", "Rasio Split": "90:10", "Akurasi": "0.9706", "Presisi": "1.0000", "Recall": "0.6736", "F1-score": "0.8050"},
-            {"Skenario": "XGBOOST", "Data": "Data Kaggle", "Rasio Split": "80:20", "Akurasi": "0.9706", "Presisi": "1.0000", "Recall": "0.6711", "F1-score": "0.8032"},
-            {"Skenario": "XGBOOST", "Data": "Data Kaggle", "Rasio Split": "70:30", "Akurasi": "0.9711", "Presisi": "1.0000", "Recall": "0.6760", "F1-score": "0.8067"},
-            {"Skenario": "XGBOOST", "Data": "Data Kaggle + Data Puskesmas", "Rasio Split": "90:10", "Akurasi": "0.7581", "Presisi": "0.5738", "Recall": "0.7527", "F1-score": "0.6512"},
-            {"Skenario": "XGBOOST", "Data": "Data Kaggle + Data Puskesmas", "Rasio Split": "80:20", "Akurasi": "0.8032", "Presisi": "0.6481", "Recall": "0.7527", "F1-score": "0.6965"},
-            {"Skenario": "XGBOOST", "Data": "Data Kaggle + Data Puskesmas", "Rasio Split": "70:30", "Akurasi": "0.7806", "Presisi": "0.6087", "Recall": "0.7527", "F1-score": "0.6731"},
-            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle", "Rasio Split": "90:10", "Akurasi": "0.9411", "Presisi": "0.9334", "Recall": "0.9505", "F1-score": "0.9418"},
-            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle", "Rasio Split": "80:20", "Akurasi": "0.9334", "Presisi": "0.9271", "Recall": "0.9414", "F1-score": "0.9342"},
-            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle", "Rasio Split": "70:30", "Akurasi": "0.9412", "Presisi": "0.9368", "Recall": "0.9471", "F1-score": "0.9419"},
-            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle + Data Puskesmas", "Rasio Split": "90:10", "Akurasi": "0.9263", "Presisi": "0.9512", "Recall": "0.8986", "F1-score": "0.9242"},
-            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle + Data Puskesmas", "Rasio Split": "80:20", "Akurasi": "0.8594", "Presisi": "0.8333", "Recall": "0.8986", "F1-score": "0.8647"},
-            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle + Data Puskesmas", "Rasio Split": "70:30", "Akurasi": "0.7719", "Presisi": "0.7169", "Recall": "0.8986", "F1-score": "0.7975"},
+            {"Skenario": "XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 8 Fitur", "Rasio Split": "90:10", "Akurasi": "0.7516", "Presisi": "1.0000", "Recall": "0.1720", "F1-score": "0.2936"},
+            {"Skenario": "XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 8 Fitur", "Rasio Split": "80:20", "Akurasi": "0.7032", "Presisi": "1.0000", "Recall": "0.0108", "F1-score": "0.0213"},
+            {"Skenario": "XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 8 Fitur", "Rasio Split": "70:30", "Akurasi": "0.7032", "Presisi": "1.0000", "Recall": "0.0108", "F1-score": "0.0213"},
+            {"Skenario": "XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "90:10", "Akurasi": "0.7871", "Presisi": "0.6134", "Recall": "0.7849", "F1-score": "0.6887"},
+            {"Skenario": "XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "80:20", "Akurasi": "0.7903", "Presisi": "0.6228", "Recall": "0.7634", "F1-score": "0.6860"},
+            {"Skenario": "XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "70:30", "Akurasi": "0.7000", "Presisi": "0.5000", "Recall": "0.7527", "F1-score": "0.6009"},
+            {"Skenario": "XGBOOST", "Data": "Data Kaggle 4 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "90:10", "Akurasi": "0.7581", "Presisi": "0.5738", "Recall": "0.7527", "F1-score": "0.6512"},
+            {"Skenario": "XGBOOST", "Data": "Data Kaggle 4 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "80:20", "Akurasi": "0.8032", "Presisi": "0.6481", "Recall": "0.7527", "F1-score": "0.6925"},
+            {"Skenario": "XGBOOST", "Data": "Data Kaggle 4 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "70:30", "Akurasi": "0.7806", "Presisi": "0.6087", "Recall": "0.7527", "F1-score": "0.6731"},
+            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 8 Fitur", "Rasio Split": "90:10", "Akurasi": "0.7129", "Presisi": "1.0000", "Recall": "0.0430", "F1-score": "0.0825"},
+            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 8 Fitur", "Rasio Split": "80:20", "Akurasi": "0.7000", "Presisi": "0.0000", "Recall": "0.0000", "F1-score": "0.0000"},
+            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 8 Fitur", "Rasio Split": "70:30", "Akurasi": "0.7000", "Presisi": "0.0000", "Recall": "0.0000", "F1-score": "0.0000"},
+            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "90:10", "Akurasi": "0.6871", "Presisi": "0.4867", "Recall": "0.7849", "F1-score": "0.6008"},
+            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "80:20", "Akurasi": "0.6871", "Presisi": "0.4867", "Recall": "0.7849", "F1-score": "0.6008"},
+            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle 8 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "70:30", "Akurasi": "0.6806", "Presisi": "0.4803", "Recall": "0.7849", "F1-score": "0.5959"},
+            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle 4 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "90:10", "Akurasi": "0.9065", "Presisi": "0.8810", "Recall": "0.7957", "F1-score": "0.8362"},
+            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle 4 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "80:20", "Akurasi": "0.8129", "Presisi": "0.6549", "Recall": "0.7957", "F1-score": "0.7184"},
+            {"Skenario": "ADASYN + XGBOOST", "Data": "Data Kaggle 4 Fitur + Data Puskesmas 4 Fitur", "Rasio Split": "70:30", "Akurasi": "0.6871", "Presisi": "0.4867", "Recall": "0.7849", "F1-score": "0.6008"},
         ]
     )
     st.dataframe(classification_table)
     
     st.subheader("1.4.8 Kesimpulan")
-    st.write("Melalui penelitian ini, telah dilakukan upaya untuk meningkatkan performa model Extreme Gradient Boosting (XGBOOST) yang dilatih menggunakan data public yang bersumber dari platform kaggle dengan menerapkan teknik oversampling Adaptive Synthetic Sampling (ADASYN) dan diterapkan ke data pasien diabetes Puskemas Bandaran Pamekasan. Model data kaggle menggunakan ADASYN dengan rasio 80:20 menunjukan performa terbaik dengan nilai f1-score tertinggi serta presisi dan recall yang seimbang sehingga model lebih optimal dalam rasio ini. Sedangkan pada data puskesmas menggunakan ADASYN dengan rasio 90:10 menjadi model dengan performa terbaik karena capaian akurasi 0.9263, presisi 0.9512, recall 0.8916, dan f1-score 0.9242 yang seimbang. Dengan demikian, penerapan teknik oversampling Adaptive Synthetic Sampling (ADASYN) untuk penyeimbang data yang akan dilakukan klasifikasi dengan model Extreme Gradient Boosting (XGBOOST) memiliki pengaruh sebagai pendekatan yang efektif dalam meningkatkan performa model, khususnya pada situasi data yang tidak seimbang. Kombinasi keduanya membuat model dapat memanfaatkan data training lebih efisien.")
+    st.write("Berdasarkan serangkaian skenario pengujian yang telah dilakukan penerapan metode Adaptive Synthetic Sampling (ADASYN) pada klasifikasi diabetes menggunakan Extreme Gradient Boosting (XGBOOST) terbukti memberikan dampak yang signifikan dalam meningkatkan performa model khususnya dalam menghadapi ketidakseimbangan kelas pada data. Seluruh skenario dalam penelitian ini telah menguji berbagai kombinasi rasio data latih dan uji 90:10, 80:20, dan 70:30 serta berbagai kombinasi fitur 8 fitur dengan penambahan 4 fitur polynomial pada masing – masing data, 8 fitur utama pada data Kaggle dan 4 fitur sepadan pada data Puskesmas yang ditambahkan 4 fitur polynomial, dan 4 fitur sepadan dari masing – masing data. Dari hasil yang diperoleh performa terbaik dicapai pada skenario dengan rasio data 90:10 dan kombinasi fitur 4x4 yaitu 4 fitur dari data Kaggle dan 4 dari datas Puskesmas. Pada skenario tersebut, model berhasil mencapai akurasi sebesar 0.9065, presisi sebesar 0.8810, recall 0.7957, dan F1-score sebesar 0.8362. Nilai-nilai tersebut menunjukkan bahwa model mampu mengidentifikasi kelas positif dengan sangat baik sekaligus mempertahankan keseimbangan antara kemampuan deteksi dan minimnya kesalahan klasifikasi yang dibuktikan adanya peningkatan nilai recall yang semula sangat rendah menjadi lebih seimbang terhadap presisi serta menghasilkan F1-score yang lebih tinggi. Selain itu, pengaruh rasio data latih dan uji juga terbukti berperan penting dalam kinerja model. Rasio 90:10 memungkinkan model memperoleh lebih banyak data untuk pembelajaran, yang berdampak langsung terhadap peningkatan performa, tanpa menyebabkan overfitting.")
     
 elif page == "Proses Klasifikasi Data":
     # Load Data
-    st.subheader("📊 Input Data Public")
+    st.subheader("📊 Input Data Kaggle")
     st.write("Program dibawah merupakan kode untuk melakukan load data dari python.")
     code = ''' data = pd.read_csv('/content/diabetes_prediction_dataset.csv') '''
     st.code(code, language="python")
@@ -159,30 +190,22 @@ elif page == "Proses Klasifikasi Data":
     
     st.write(f"Jumlah Data Duplikat : {duplicates_removed}")
     
-    # Menghapus Kolom
-    st.subheader("🗂️ Menyesuaikan Atribut Dengan Data Puskesmas")
-    st.write("Program dibawah merupakan kode untuk menghapus kolom atribut untuk menyesuaikan atribut yang tersedia pada Data Puskesmas.")
-    
-    data = data.drop(columns=['hypertension', 'heart_disease', 'smoking_history', 'bmi'])
-    
-    code = ''' 
-    data = data.drop(columns=['hypertension', 'heart_disease', 'smoking_history', 'bmi'])
-    '''
-    st.code(code, language="python")
-    st.write("Output:")
-    
-    st.write(data)
-    
     # Transformasi Data
     st.subheader("🎭 Transformasi Data")
     st.write("Program dibawah merupakan kode untuk mengubah atribut dengan tipe data kategorikal menjadi numerik.")
     
-    label_encoding = LabelEncoder()
-    data['gender'] = label_encoding.fit_transform(data['gender'])
+    label_encoding_gender = LabelEncoder()
+    data['gender'] = label_encoding_gender.fit_transform(data['gender'])
+    
+    label_encoding_smoking = LabelEncoder()
+    data['smoking_history'] = label_encoding_smoking.fit_transform(data['smoking_history'])
     
     code = ''' 
     label_encoding = LabelEncoder()
     data['gender'] = label_encoding.fit_transform(data['gender'])
+    
+    label_encoding_smoking = LabelEncoder()
+    data['smoking_history'] = label_encoding_smoking.fit_transform(data['smoking_history'])
     '''
     st.code(code, language="python")
     st.write("Output:")
@@ -274,12 +297,12 @@ elif page == "Proses Klasifikasi Data":
     st.write("Output:")
     
     st.write("Kombinasi Nilai Parameter Terbaik :")
-    st.write(" 'n_estimators': 108")
+    st.write(" 'n_estimators': 185")
     st.write(" 'max_depth': 11")
-    st.write(" 'learning_rate': 0.3282004146218894")
-    st.write(" 'colsample_bytree': 0.7541613152436578")
-    st.write(" 'gamma': 0.09307489905925012")
-    st.write(" 'min_child_weight': 3")
+    st.write(" 'learning_rate': 0.19720799914920925")
+    st.write(" 'colsample_bytree': 0.6785791475774542")
+    st.write(" 'gamma': 0.08733666463315318")
+    st.write(" 'min_child_weight': 1")
     
     # Modeling
     st.subheader("📈 Modeling dengan Metode XGBOOST")
@@ -298,7 +321,7 @@ elif page == "Proses Klasifikasi Data":
     
     table_results = pd.DataFrame(
         [
-            {"Accuracy": 0.9334, "Precision": 0.9271, "Recall": 0.9414, "F1-score": 0.9342}
+            {"Akurasi": 0.9720, "Presisi": 0.9815, "Recall": 0.9623, "F1-score": 0.9718}
         ]
     )
     st.code(code, language="python")
@@ -307,6 +330,42 @@ elif page == "Proses Klasifikasi Data":
     st.write(table_results, use_container_width=True)
     
     # Penerapan Model ke Data Puskesmas
+    st.subheader("📊 Input Data Puskesmas")
+    st.write("Program dibawah merupakan kode untuk melakukan load data dari python.")
+    code = ''' data = pd.read_csv('/content/data_puskesmas.csv') '''
+    st.code(code, language="python")
+    st.write("Output:")
+    
+    data_puskesmas = pd.read_csv("data_puskesmas.csv")
+    df_puskesmas = data_puskesmas.drop(columns=['no','nama','HCT','RBC','WBC','PLT'])
+    st.write(df_puskesmas)
+    
+    st.subheader("🧬 Rekayasa Fitur dengan Polynomial Feature")
+    st.write("Program dibawah merupakan kode untuk melakukan penambahan fitur pada data menggunakan turunan dari fitur yang telah tersedia.")
+    
+    code = ''' 
+    X_original_puskes = df_puskes[['gender', 'age', 'HbA1c_level', 'blood_glucose_level']]
+    y_puskes = df_puskes['diabetes'] 
+    
+    poly_puskes = PolynomialFeatures(degree=2, include_bias=False)
+    X_poly_all_puskes = poly_puskes.fit_transform(X_original_puskes[['age', 'HbA1c_level', 'blood_glucose_level']])
+    poly_feature_names_puskes = poly_puskes.get_feature_names_out(['age', 'HbA1c_level', 'blood_glucose_level'])
+    
+    df_poly_puskes = pd.DataFrame(X_poly_all_puskes, columns=poly_feature_names_puskes)
+    
+    original_feature_names_puskes = ['age', 'HbA1c_level', 'blood_glucose_level']
+    interaction_feature_names_puskes = [f for f in poly_feature_names_puskes if f not in original_feature_names_puskes]
+    X_interaction_puskes = df_poly_puskes[interaction_feature_names_puskes]
+    selector = SelectKBest(score_func=f_classif, k=1)
+    X_selected_interactions_puskes = selector.fit_transform(X_interaction_puskes, y_puskes)
+    selected_interaction_names_puskes = X_interaction_puskes.columns[selector.get_support()]
+    '''
+    st.code(code, language="python")
+    st.write("Output:")
+    
+    data_rekayasa = pd.read_csv("data_rekayasa.csv")
+    st.write(data_rekayasa)
+    
     st.subheader("🔮 Klasifikasi Pada Data Puskesmas menggunakan Model Terlatih")
     st.write("Program dibawah merupakan kode untuk melakukan klasifikasi pada data puskesmas menggunakan model XGBOOST data kaggle serta menampilkan evaluasi hasil.")
     
@@ -322,7 +381,7 @@ elif page == "Proses Klasifikasi Data":
     
     table_results = pd.DataFrame(
         [
-            {"Accuracy": 0.8594, "Precision": 0.8333, "Recall": 0.8986, "F1-score": 0.8647}
+            {"Akurasi": 0.6871, "Presisi": 0.4867, "Recall": 0.7849, "F1-score": 0.6008}
         ]
     )
     st.code(code, language="python")
@@ -332,59 +391,111 @@ elif page == "Proses Klasifikasi Data":
 
 elif page == "Prediksi Baru":
     st.header("🧪 Prediksi Baru Diabetes Menggunakan Model Terlatih")
-
-    # ==== Load Model dan Alat Preprocessing ====
-    try:
-        model = joblib.load("model_artifacts/xgboost_model.pkl")
-        scaler = joblib.load("model_artifacts/scaler.pkl")
-        label_encoders = joblib.load("model_artifacts/label_encoders_diabetes.pkl")
-    except Exception as e:
-        st.error(f"Gagal memuat model atau preprocessing tools: {e}")
+    st.subheader("📝 Masukkan Data Pasien Baru")
+    
+    # ==== Load Model dan Scaler ====
+    model_xgb = joblib.load('model_artifacts/xgboost_model.pkl')
+    le_gender = joblib.load('model_artifacts/gender_encoder.pkl')
+    le_smoking = joblib.load('model_artifacts/smoking_history_encoder.pkl')
+    scaler = joblib.load('model_artifacts/scaler.pkl')
     
     # ==== Form Input ====
-    st.subheader("📝 Masukkan Data Pasien Baru")
+    with st.form("input_form"):
+        gender = st.selectbox("Jenis Kelamin", options=["Female", "Male"])
+        age = st.number_input("Usia", min_value=0.0, max_value=120.0)
+        hypertension = st.selectbox("Hipertensi", options=[0, 1])
+        heart_disease = st.selectbox("Penyakit Jantung", options=[0, 1])
+        smoking_history = st.selectbox("Riwayat Merokok", options=["No Info", "current", "ever", "former", "never", "not current"])
+        bmi = st.number_input("BMI", min_value=0.0, step=0.1)
+        hba1c = st.number_input("HbA1c Level", min_value=0.0, step=0.1)
+        glucose = st.number_input("Blood Glucose Level", min_value=0, step=1)
 
-    with st.form("form_prediksi"):
-        gender = st.selectbox("Jenis Kelamin", options=["Male", "Female"])
-        age = st.number_input("Umur", min_value=0, max_value=120)
-        HbA1c_level = st.number_input("HbA1c Level", min_value=0.0, max_value=20.0, step=0.1)
-        blood_glucose_level = st.number_input("Blood Glucose Level", min_value=0, max_value=500)
-        
+        gender_map = {"Female": 0, "Male": 1}
+        smoking_map = {
+            "No Info": 0,
+            "current": 1,
+            "ever": 2,
+            "former": 3,
+            "never": 4,
+            "not current": 5
+        }
+    
         submitted = st.form_submit_button("Prediksi")
 
     if submitted:
-        try:
-            # Membuat DataFrame dari inputan
-            input_data = pd.DataFrame([{
-                "gender": gender,
-                "age": age,
-                "HbA1c_level": HbA1c_level,
-                "blood_glucose_level": blood_glucose_level
-            }])
-
-            st.write("📋 Data yang Dimasukkan:")
-            st.dataframe(input_data)
-
-            # ==== Transformasi Kategorikal ====
-            if "gender" in label_encoders:
-                le = label_encoders["gender"]
-                input_data["gender"] = le.transform(input_data["gender"])
-            else:
-                st.warning("Encoder untuk kolom 'gender' tidak ditemukan.")
-
-            # ==== Normalisasi ====
-            input_scaled = scaler.transform(input_data)
-            input_scaled_df = pd.DataFrame(input_scaled, columns=input_data.columns)
-
-            # ==== Prediksi ====
-            pred_result = model.predict(input_scaled_df)[0]
-            pred_prob = model.predict_proba(input_scaled_df)[0]
-
-            label_mapping = {0: "Tidak Diabetes", 1: "Diabetes"}
-            st.subheader("🔍 Hasil Prediksi")
-            st.write(f"**Prediksi**: {label_mapping[pred_result]}")
-            st.write(f"**Probabilitas Positif**: {pred_prob[1]:.2%}")
-            st.write(f"**Probabilitas Negatif**: {pred_prob[0]:.2%}")
+        input_data = pd.DataFrame({
+            'gender': gender_map[gender],
+            'age': [age],
+            'hypertension': [hypertension],
+            'heart_disease': [heart_disease],
+            'smoking_history': smoking_map[smoking_history],
+            'bmi': [bmi],
+            'HbA1c_level': [hba1c],
+            'blood_glucose_level': [glucose]
+        })
         
-        except Exception as e:
-            st.error(f"Terjadi kesalahan saat memproses prediksi: {e}")
+        st.write(input_data)
+
+        # Normalisasi
+        input_scaled = scaler.transform(input_data)
+        st.write(input_scaled)
+
+        # Prediksi
+        prediction = model_xgb.predict(input_scaled)[0]
+        label = "Positif Diabetes" if prediction == 1 else "Negatif Diabetes"
+
+        st.success(f"Hasil Prediksi: **{label}**")
+    
+    
+    # with st.form("form_prediksi"):
+    #     gender = st.selectbox("Gender", ["Female", "Male"])
+    #     age = st.number_input("Age", min_value=0, max_value=120)
+    #     hypertension = st.selectbox("Hypertension", ["0", "1"])
+    #     heart_disease = st.selectbox("Heart Disease", ["0", "1"])
+    #     smoking_history = st.selectbox("Smoking History", ["No Info", "current", "ever", "former", "never", "not current"])
+    #     bmi = st.number_input("BMI", min_value=0.0, max_value=100.0)
+    #     hba1c = st.number_input("HbA1c Level", min_value=0.0, max_value=20.0)
+    #     glucose = st.number_input("Blood Glucose Level", min_value=0.0, max_value=300.0)
+
+    #     # Mapping ke bentuk numerik sesuai LabelEncoder
+    #     gender_map = {"Female": 0, "Male": 1}
+    #     smoking_map = {
+    #         "No Info": 0,
+    #         "current": 1,
+    #         "ever": 2,
+    #         "former": 3,
+    #         "never": 4,
+    #         "not current": 5
+    #     }
+
+    #     submitted = st.form_submit_button("Prediksi")
+        
+    #     if submitted:
+    #         input_data = {
+    #             "gender": gender_map[gender],
+    #             "age": age,
+    #             "hypertension": hypertension,
+    #             "heart_disease": heart_disease,
+    #             "smoking_history": smoking_map[smoking_history],
+    #             "bmi": bmi,
+    #             "HbA1c_level": hba1c,
+    #             "blood_glucose_level": glucose
+    #         }
+            
+    #         columns_order = ['gender', 'age', 'hypertension', 'heart_disease', 'smoking_history', 'bmi', 'HbA1c_level', 'blood_glucose_level']
+    #         input_df = pd.DataFrame([[input_data[col] for col in columns_order]], columns=columns_order)
+
+    #         # Normalisasi fitur
+    #         scaler = joblib.load("model_artifacts/scaler.pkl")
+    #         input_scaled = scaler.transform(input_df)
+
+    #         # Prediksi
+    #         model = joblib.load('model_artifacts/xgboost_model.pkl')
+    #         prediction = model.predict(input_scaled)[0]
+    #         probability = model.predict_proba(input_scaled)[0][1]
+
+    #         # Tampilkan hasil
+    #         if prediction == 1:
+    #             st.error(f"Hasil Prediksi: Positif Diabetes (Probabilitas: {probability:.2f})")
+    #         else:
+    #             st.success(f"Hasil Prediksi: Negatif Diabetes (Probabilitas: {probability:.2f})")
